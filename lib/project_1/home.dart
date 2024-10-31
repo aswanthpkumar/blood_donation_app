@@ -1,3 +1,4 @@
+import 'package:blood_donation_app/project_1/add.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,9 +17,17 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.red,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (ctx) {
+                return const AddDonors();
+              },
+            ),
+          );
+        },
         backgroundColor: Colors.red,
-        child: Icon(
+        child: const Icon(
           Icons.add,
           size: 30,
         ),
